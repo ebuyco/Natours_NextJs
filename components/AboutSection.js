@@ -1,12 +1,18 @@
 import React from 'react';
+
+// Components style import
 import Grid from '../components/styles/base/Grid';
 import Utilities from '../components/styles/base/Utilities';
 import Typography from '../components/styles/base/Typography';
 import Composition from '../components/styles/base/Composition';
+import AboutStyle from '../components/styles/layout/AboutStyle';
+import Button from '../components/styles/base/Button';
+
+//Image import from public folder source
 import Nat1 from '../public/static/nat-1-large.jpg';
 import Nat2 from '../public/static/nat-2-large.jpg';
 import Nat3 from '../public/static/nat-3-large.jpg';
-import AboutStyle from '../components/styles/layout/AboutStyle';
+
 
 const AboutSection = () => (
       <AboutStyle>
@@ -33,7 +39,9 @@ const AboutSection = () => (
                               <p className="paragraph">
                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla deserunt voluptatum nam.
                               </p>
-                              <a href="#" className="btn-text">Learn more &rarr;</a>
+                              <Button>
+                                 <a href="#" className="btn-text">Learn more &rarr;</a>
+                              </Button>
                           </div>
                           <div className="col-1-of-2">
                                 <Composition>
