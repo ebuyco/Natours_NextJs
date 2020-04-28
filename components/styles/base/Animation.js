@@ -14,7 +14,6 @@ const moveInLeft = keyframes`
             opacity: 1;
             transform: translate(0);
     }
-
 `;
 
 
