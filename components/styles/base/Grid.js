@@ -40,7 +40,7 @@ const Grid = styled.div`
                   }
 
                   @media(max-width: ${props => props.theme.screens.tab_port}){
-                          width: 100%;
+                          width: 100% !important;
                   }
             }
 
@@ -58,6 +58,7 @@ const Grid = styled.div`
 
             .col-1-of-4 {
                 width: calc((100% - 3 * ${props => props.theme.grids.gutter_horizontal}) / 4);
+
             }
 
             .col-2-of-4 {
