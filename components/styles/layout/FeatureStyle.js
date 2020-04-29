@@ -29,7 +29,12 @@ const FeatureStyle = styled.div`
               max-width: 35%;
               margin: 0 auto;
               margin-bottom: 2rem;
+
+              @media(max-width: ${props => props.theme.screens.tab_port}){
+                  max-width: 25%;
+              }
             }
+
     }
 
 

@@ -14,6 +14,7 @@ const FeatureBoxStyle = styled.div`
 
             @media(max-width: ${props => props.theme.screens.tab_port}){
                     padding: 2rem;
+                    height: 25rem;
             }
 
             &__icon {
