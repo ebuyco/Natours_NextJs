@@ -1,4 +1,7 @@
 import React from 'react';
+import Grid from '../components/styles/base/Grid';
+import Typography from '../components/styles/base/Typography';
+import Utilities from '../components/styles/base/Utilities';
 
 import World from '../public/static/world.svg';
 import Compass from '../public/static/compass.svg';
@@ -8,7 +11,9 @@ import Heart from '../public/static/heart.svg';
 const FeatureSection = () => (
     <>
           <section className="section-features">
-
+                  <Grid>
+                   <Typography>
+                     <Utilities>
                   <div className="row">
                       <div className="col-1-of-4">
                               <div className="feature-box">
@@ -52,6 +57,9 @@ const FeatureSection = () => (
                       </div>
 
                   </div>
+                        </Utilities>
+                     </Typography>
+                  </Grid>
           </section>
 
     </>
