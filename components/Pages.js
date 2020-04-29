@@ -241,6 +241,7 @@ const GlobalStyle = createGlobalStyle`
               @media(min-width: ${props => props.theme.screens.big_desktop}){
                   font-size: 75%;
               }
+              scroll-behavior: smooth;
           }
             /* Set core body defaults */
             body {
