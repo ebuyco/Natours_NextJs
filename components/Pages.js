@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Meta from '../components/Meta';
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 
+
 const theme = {
   black: '#000000',
   base: '#ffffff',
@@ -328,7 +329,7 @@ export default class Layout extends Component {
               <GlobalStyle/>
               <Meta/>
               <Inner>{this.props.children}</Inner>
-          </StyledPage>
+            </StyledPage>
 
         </ThemeProvider>
       )

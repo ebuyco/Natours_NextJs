@@ -8,6 +8,7 @@ import Composition from '../components/styles/base/Composition';
 import AboutStyle from '../components/styles/layout/AboutStyle';
 import Button from '../components/styles/base/Button';
 
+
 //Image import from public folder source
 import Nat1 from '../public/static/nat-1-large.jpg';
 import Nat2 from '../public/static/nat-2-large.jpg';
@@ -80,6 +81,7 @@ const AboutSection = () => (
                        </Typography>
                        </Utilities>
           </section>
+
       </AboutStyle>
 );
 
