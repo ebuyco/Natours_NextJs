@@ -10,7 +10,7 @@ const NavStyle = styled.div`
               display: none;
 
               ${props => props.open && `transform: scale(80);`};
-              ${props => props.checked && `opacity: 1; width: 100%;`};
+              ${props => props.open && `opacity: 1; width: 100%;`};
 
               &:checked ~ &__background {
                 transform: scale(80);
@@ -73,8 +73,15 @@ const NavStyle = styled.div`
 
           &__nav {
 
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 1500;
+                transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
+                display:  ${({ open }) => open ? 'none' : 'block' };
 
-              &__setClose{
+                              /* &__setClose{
                   display:none;
               }
 
@@ -103,7 +110,7 @@ const NavStyle = styled.div`
                           right: 3.5rem;
                     }
 
-              }
+              } */
 
 
           }

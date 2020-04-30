@@ -1,27 +1,19 @@
-import React , {useState} from 'react';
+import React , {useState, useRef} from 'react';
 import NavStyle from './styles/layout/NavStyle';
 import NContent from './NContent';
 
 const Navigation = () => {
-  const [toogleDrawerisVisible, setTogglehandlerVisible] = useState(false);
-
-  const toogleDrawerClosedHandler = () => {
-    toogleDrawerisVisible(false);
-  }
-
-  const setTogglehandler = () => {
-      setTogglehandlerVisible(!toogleDrawerisVisible)
-      console.log('test')
-  }
 
 
+  const [open, setOpen] = useState(false);
+
+  const node = useRef();
+  const menuId = "navi-toggle";
 
       return(
-          <NavStyle>
-              <NContent
-                 open={toogleDrawerisVisible}
-                 closed={toogleDrawerClosedHandler}
-                 toggleHandler={setTogglehandler}
+          <NavStyle ref={node}>
+            <NContent
+             open={open} setOpen={setOpen} aria-controls={menuId}
               />
           </NavStyle>
       )

@@ -1,18 +1,10 @@
 import React from 'react';
 
 
-const NContent = (props) => {
+const NContent = ({ open, setOpen, ...props }) => {
 
-  let attachedClasses = [props.Close ? 'Close' : 'Close'];
-  if (props.open) {
-    attachedClasses = [props.Open ? 'Open' : 'Open'];
-  }
 
-  let preClasses = [props.setClose ? 'setClose' : 'setClose'];
-  if (props.open) {
-    preClasses = [props.setOpen ? 'setOpen' : 'setOpen'];
-  }
-
+ const isExpanded = open ? true : false;
 
   return(
       <>
@@ -20,24 +12,23 @@ const NContent = (props) => {
                     <input type="checkbox" className="navigation__checkbox"/>
 
                     <label htmlFor="navi-toggle"
-                    // className="navigation__button"
-                    className={`navigation__button ${attachedClasses.join('')}`}
+                     className="navigation__button"
+                      onClick={() => setOpen(!open)} {...props}
+
                     >
                             <span
                             className="navigation__icon"
-                            onClick={props.toggleHandler}
                             >&nbsp;</span>
                     </label>
 
                     <div className="navigation__background">&nbsp;</div>
 
                     <nav
-                    className={`navigation__nav__${preClasses.join('')}`}
-
+                    className="navigation__nav"
+                    aria-label="Toggle menu" aria-expanded={isExpanded} open={open}
                     >
                          <label htmlFor="navi-toggle"
-                        className={`navigation__button__inside__${attachedClasses.join('')}`}
-                    >
+                         className="navigation__button">
 
                     </label>
                           <ul className="navigation__list">
