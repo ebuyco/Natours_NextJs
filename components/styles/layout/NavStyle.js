@@ -12,6 +12,14 @@ const NavStyle = styled.div`
               ${props => props.open && `transform: scale(80);`};
               ${props => props.checked && `opacity: 1; width: 100%;`};
 
+              &:checked ~ &__background {
+                transform: scale(80);
+            }
+
+            &:checked ~ &__nav {
+                opacity: 1;
+                width: 100%;
+            }
           }
 
           &__button {
@@ -27,54 +35,76 @@ const NavStyle = styled.div`
               text-align: center;
               cursor: pointer;
 
-              @media(max-width: ${props => props.theme.screens.tab_port}){
-                    top: 4rem;
-                    right: 4rem;
+              /* &.Open{
+                  display: none;
+
               }
 
-              @media(max-width: ${props=> props.theme.screens.phone}){
-                    top: 3rem;
-                    right: 3rem;
-              }
+              &.Close{
+                  display: block;
+              } */
+
           }
 
           &__background {
-              height: 6rem;
-              width: 6rem;
-              border-radius: 50%;
-              position: fixed;
-              top: 6.5rem;
-              right: 6.5rem;
-              background-image: radial-gradient(${props => props.theme.color_primary_light}, ${props => props.theme.color_primary_dark});
-              z-index: 1000;
-              transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
-              ${props => props.open && `transform: scale(80);`};
 
-              @media(max-width: ${props => props.theme.screens.tab_port}){
-                    top: 4.5rem;
-                    right: 4.5rem;
-              }
+                    height: 6rem;
+                    width: 6rem;
+                    border-radius: 50%;
+                    position: fixed;
+                    top: 6.5rem;
+                    right: 6.5rem;
+                    background-image: radial-gradient(${props => props.theme.color_primary_light}, ${props => props.theme.color_primary_dark});
+                    z-index: 1000;
+                    transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+                    ${props => props.open && `transform: scale(80);`};
 
-              @media(max-width: ${props => props.theme.screens.phone}){
-                    top: 3.5rem;
-                    right: 3.5rem;
-              }
+                    @media(max-width: ${props => props.theme.screens.tab_port}){
+                          top: 4.5rem;
+                          right: 4.5rem;
+                    }
 
-
+                    @media(max-width: ${props => props.theme.screens.phone}){
+                          top: 3.5rem;
+                          right: 3.5rem;
+                    }
 
           }
 
           &__nav {
+
+
+              &__setClose{
+                  display:none;
+              }
+
+              &__setOpen{
+                 display:block;
                 height: 100vh;
                 position: fixed;
                 top: 0;
                 left: 0;
                 z-index: 1500;
 
-                opacity: 0;
-                width: 0;
-                transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-                ${props => props.checked && `opacity: 1; width: 100%;`};
+
+                 opacity: 1;
+                  width: 100%;
+                   background-image: radial-gradient(${props => props.theme.color_primary_light}, ${props => props.theme.color_primary_dark});
+                   transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+
+
+                    @media(max-width: ${props => props.theme.screens.tab_port}){
+                          top: 4.5rem;
+                          right: 4.5rem;
+                    }
+
+                    @media(max-width: ${props => props.theme.screens.phone}){
+                          top: 3.5rem;
+                          right: 3.5rem;
+                    }
+
+              }
+
 
           }
 
@@ -115,10 +145,19 @@ const NavStyle = styled.div`
                 &:hover,
                 &:active {
                       background-position: 100%;
-                      color: ${props => props.theme.base};
+                      color: ${props => props.theme.color_primary};
                       transform: translateX(1rem);
                 }
           }
+
+           &__checkbox:checked ~ &__background {
+                transform: scale(80);
+            }
+
+            &__checkbox:checked ~ &__nav {
+                opacity: 1;
+                width: 100%;
+            }
 
           &__icon {
               position: relative;
@@ -147,6 +186,8 @@ const NavStyle = styled.div`
               &::after {
                 top: .8rem;
                 }
+
+
           }
 
      &__button:hover &__icon::before {
