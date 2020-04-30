@@ -4,16 +4,23 @@ import NContent from './NContent';
 
 const Navigation = () => {
 
+  const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false);
 
-  const [open, setOpen] = useState(false);
+  const sideDrawerClosedHandler = () => {
+    setSideDrawerIsVisible(false);
+  };
 
-  const node = useRef();
-  const menuId = "navi-toggle";
+  const sideDrawerToggleHandler = () => {
+    setSideDrawerIsVisible(!sideDrawerIsVisible);
+    console.log('visible');
+  };
 
       return(
-          <NavStyle ref={node}>
+          <NavStyle>
             <NContent
-             open={open} setOpen={setOpen} aria-controls={menuId}
+          drawerToggleClicked={sideDrawerToggleHandler}
+          open={sideDrawerIsVisible}
+          closed={sideDrawerClosedHandler}
               />
           </NavStyle>
       )

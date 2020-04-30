@@ -1,10 +1,13 @@
 import React from 'react';
 
 
-const NContent = ({ open, setOpen, ...props }) => {
+const NContent = (props) => {
 
+  let attachedClasses = [props.Close ? 'Close' : 'Close'];
+  if (props.open) {
+      attachedClasses =  [props.Open ? 'Open' : 'Open'];
+  }
 
- const isExpanded = open ? true : false;
 
   return(
       <>
@@ -13,8 +16,7 @@ const NContent = ({ open, setOpen, ...props }) => {
 
                     <label htmlFor="navi-toggle"
                      className="navigation__button"
-                      onClick={() => setOpen(!open)} {...props}
-
+                     onClick={props.drawerToggleClicked}
                     >
                             <span
                             className="navigation__icon"
@@ -24,8 +26,8 @@ const NContent = ({ open, setOpen, ...props }) => {
                     <div className="navigation__background">&nbsp;</div>
 
                     <nav
-                    className="navigation__nav"
-                    aria-label="Toggle menu" aria-expanded={isExpanded} open={open}
+
+                    className={`navigation__nav ${attachedClasses.join('')}`}
                     >
                          <label htmlFor="navi-toggle"
                          className="navigation__button">
