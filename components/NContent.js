@@ -3,12 +3,12 @@ import React from 'react';
 
 const NContent = (props) => {
 
-  let attachedClasses = [props.Close ? 'Close' : 'Close'];
+  const attachedClasses = [props.Close ? 'Close' : 'Close'];
   if (props.open) {
     attachedClasses = [props.Open ? 'Open' : 'Open'];
   }
 
-  let preClasses = [props.setClose ? 'setClose' : 'setClose'];
+  const preClasses = [props.setClose ? 'setClose' : 'setClose'];
   if (props.open) {
     preClasses = [props.setOpen ? 'setOpen' : 'setOpen'];
   }
