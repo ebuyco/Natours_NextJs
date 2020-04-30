@@ -17,7 +17,7 @@ import Nat3 from '../public/static/nat-3-large.jpg';
 
 const AboutSection = () => (
       <AboutStyle>
-          <section className="section-about">
+          <section className="section-about" id="about">
                       <Utilities>
                        <Typography>
                           <div className="u-center-text u-margin-bottom-big">

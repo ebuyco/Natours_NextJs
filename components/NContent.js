@@ -3,12 +3,12 @@ import React from 'react';
 
 const NContent = (props) => {
 
-  const attachedClasses = [props.Close ? 'Close' : 'Close'];
+  let attachedClasses = [props.Close ? 'Close' : 'Close'];
   if (props.open) {
     attachedClasses = [props.Open ? 'Open' : 'Open'];
   }
 
-  const preClasses = [props.setClose ? 'setClose' : 'setClose'];
+  let preClasses = [props.setClose ? 'setClose' : 'setClose'];
   if (props.open) {
     preClasses = [props.setOpen ? 'setOpen' : 'setOpen'];
   }
@@ -42,7 +42,7 @@ const NContent = (props) => {
                     </label>
                           <ul className="navigation__list">
                                     <li className="navigation__item">
-                                        <a href="#" className="navigation__link">
+                                        <a href="#about" className="navigation__link">
                                             <span>
                                               01
                                             </span>
