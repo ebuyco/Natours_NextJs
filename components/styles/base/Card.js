@@ -5,9 +5,9 @@ const Card = styled.div`
 
      .card {
       perspective: 150rem;
-      -moz-perspective: 150rem;
       position: relative;
       height: 52rem;
+
 
       &__side {
           height: 52rem;
@@ -16,61 +16,86 @@ const Card = styled.div`
           top: 0;
           left: 0;
           width: 100%;
-          -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+           backface-visibility: hidden;
           border-radius: 3px;
           overflow: hidden;
           box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.15);
 
           &--front {
                   background-color: ${props => props.theme.base};
+                  z-index: 8889999999998;
+
+                  &:hover{
+                        transform: rotateY(-180deg);
+                        cursor: pointer;
+
+                              @media(max-width: ${props => props.theme.screens.tab_port}), only screen and (hover:none){
+                              transform: rotateY(0);
+                              }
+                  }
           }
 
           &--back {
-                  transform: rotateY(180deg);
+             transform: rotateY(0);
+             z-index: 100;
 
                   &-1 {
-                          background-image: linear-gradient(to right bottom, ${props => props.theme.color_secondary_light}, ${props => props.theme.color_secondary_dark});
+                        background-image: linear-gradient(to right bottom, ${props => props.theme.color_secondary_light}, ${props => props.theme.color_secondary_dark});
+
                   }
 
                   &-2 {
                           background-image: linear-gradient(to right bottom, ${props => props.theme.color_primary_light}, ${props => props.theme.color_primary_dark});
+
                   }
 
                   &-3 {
-                          background-image: linear-gradient(to right bottom, ${props => props.theme.color_})
+                          background-image: linear-gradient(to right bottom, ${props => props.theme.color_tertiary_light}, ${props => props.theme.color_tertiary_dark});
+
                   }
 
                   @media(max-width: ${props => props.theme.screens.tab_port}), only screen and (hover:none){
                         transform: rotateY(0);
                         clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
                   }
+
+                  &:hover{
+                    /* transform: rotateY(-180deg); */
+                    transform: rotateY(0);
+                    cursor: pointer;
+                          &-1 {
+                            background-image: linear-gradient(to right bottom, ${props => props.theme.color_secondary_light}, ${props => props.theme.color_secondary_dark});
+
+                          }
+
+                        &-2 {
+                          background-image: linear-gradient(to right bottom, ${props => props.theme.color_primary_light}, ${props => props.theme.color_primary_dark});
+
+                       }
+
+                       &-3 {
+                          background-image: linear-gradient(to right bottom, ${props => props.theme.color_tertiary_light}, ${props => props.theme.color_tertiary_dark});
+
+                        }
+                  }
           }
+
 
           @media(max-width: ${props => props.theme.screens.tab_port}), only screen and (hover:none){
                 height: auto;
                 position: relative;
                 box-shadow: none;
           }
+
+
       }
 
-      &:hover &__side--front {
-            transform: rotateY(-180deg);
 
-            @media(max-width: ${props => props.theme.screens.tab_port}), only screen and (hover:none){
-                transform: rotateY(0);
-            }
-      }
-
-      &:hover &__side--back {
-            transform: rotateY(0);
-      }
 
       &__picture{
             background-size: cover;
             height: 23rem;
             background-blend-mode: screen;
-            -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
             clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
             border-top-left-radius: 3px;
             border-top-right-radius: 3px;
@@ -156,7 +181,7 @@ const Card = styled.div`
               width: 90%;
               text-align: center;
 
-              @media(max-width: ${props => props.theme.screens.tab_port}), only screen and (hover:none){
+             @media(max-width: ${props => props.theme.screens.tab_port}), only screen and (hover:none){
                   position: relative;
                   top: 0%;
                   left: 0;
@@ -169,6 +194,7 @@ const Card = styled.div`
       &__price-box{
             text-align:center;
             color: ${props => props.theme.base};
+            margin-bottom: 8rem;
 
             @media(max-width: ${props => props.theme.screens.tab_port}), only screen and (hover:none){
                 margin-bottom: 3rem;
@@ -195,9 +221,8 @@ const Card = styled.div`
             border-radius: 3px;
             background-color: ${props => props.theme.base};
             box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.15);
-
-
       }
+
 
      }
 
