@@ -8,7 +8,6 @@ const Card = styled.div`
       position: relative;
       height: 52rem;
 
-
       &__side {
           height: 52rem;
           transition: all .8s ease;
@@ -32,12 +31,13 @@ const Card = styled.div`
                               @media(max-width: ${props => props.theme.screens.tab_port}), only screen and (hover:none){
                               transform: rotateY(0);
                               }
-                  }
-          }
+                 }
+               }
 
-          &--back {
-             transform: rotateY(0);
-             z-index: 100;
+           &--back {
+              /* transform: rotateY(180deg); */
+              transform: rotateY(0);
+              z-index: 100;
 
                   &-1 {
                         background-image: linear-gradient(to right bottom, ${props => props.theme.color_secondary_light}, ${props => props.theme.color_secondary_dark});
@@ -60,8 +60,8 @@ const Card = styled.div`
                   }
 
                   &:hover{
-                    /* transform: rotateY(-180deg); */
-                    transform: rotateY(0);
+                     /* transform: rotateY(-180deg); */
+                     transform: rotateY(0);
                     cursor: pointer;
                           &-1 {
                             background-image: linear-gradient(to right bottom, ${props => props.theme.color_secondary_light}, ${props => props.theme.color_secondary_dark});
@@ -77,8 +77,8 @@ const Card = styled.div`
                           background-image: linear-gradient(to right bottom, ${props => props.theme.color_tertiary_light}, ${props => props.theme.color_tertiary_dark});
 
                         }
-                  }
-          }
+                   }
+           }
 
 
           @media(max-width: ${props => props.theme.screens.tab_port}), only screen and (hover:none){
