@@ -47,8 +47,7 @@ const NavStyle = styled.div`
           }
 
           &__background {
-
-                    height: 6rem;
+                     height: 6rem;
                     width: 6rem;
                     border-radius: 50%;
                     position: fixed;
@@ -57,7 +56,15 @@ const NavStyle = styled.div`
                     background-image: radial-gradient(${props => props.theme.color_primary_light}, ${props => props.theme.color_primary_dark});
                     z-index: 1000;
                     transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
-                    ${props => props.open && `transform: scale(80);`};
+
+                    &.Open{
+
+                        display: block;
+                        transform: scale(80);
+                    }
+                    &.Close{
+                        display: none;
+                    }
 
                     @media(max-width: ${props => props.theme.screens.tab_port}){
                           top: 4.5rem;
@@ -72,7 +79,6 @@ const NavStyle = styled.div`
           }
 
           &__nav {
-
                 height: 100vh;
                 position: fixed;
                 top: 0;
@@ -86,29 +92,8 @@ const NavStyle = styled.div`
 
               &.Open{
                 display:block;
-                /* height: 100vh;
-                position: fixed;
-                top: 0;
-                left: 0;
-                z-index: 1500; */
-
-
-                  opacity: 1;
-                  width: 100%;
-                   background-image: radial-gradient(${props => props.theme.color_primary_light}, ${props => props.theme.color_primary_dark});
-                   transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
-
-
-                    @media(max-width: ${props => props.theme.screens.tab_port}){
-                          top: 4.5rem;
-                          right: 4.5rem;
-                    }
-
-                    @media(max-width: ${props => props.theme.screens.phone}){
-                          top: 3.5rem;
-                          right: 3.5rem;
-                    }
-
+                opacity: 1;
+                width: 100%;
               }
 
 
@@ -200,14 +185,7 @@ const NavStyle = styled.div`
         top: -1rem;
     }
 
-    &__checkbox:checked ~ &__background {
-        transform: scale(80);
-    }
 
-    &__checkbox:checked ~ &__nav {
-        opacity: 1;
-        width: 100%;
-    }
 
     &__button:hover &__icon::after {
         top: 1rem;

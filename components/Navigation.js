@@ -21,11 +21,13 @@ const Navigation = () => {
                             >&nbsp;</span>
                     </label>
 
-                    <div className="navigation__background">&nbsp;</div>
+                    <div
+                    // className="navigation__background"
+                    className={`navigation__background ${isOpen ? 'Open' : 'Close'}`}
+                    >X</div>
 
                     <nav
-                    // className="navigation__nav"
-                      className={`navigation__nav ${isOpen ? 'Open' : 'Close'}`}
+                     className={`navigation__nav ${isOpen ? 'Open' : 'Close'}`}
                     >
 
                           <ul className="navigation__list">
