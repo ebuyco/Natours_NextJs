@@ -86,7 +86,7 @@ const Card = styled.div`
             }
 
             &--3{
-                  background-image: linear-gradient(to right bottom, ${props => props.theme.color_tertiary_light}, ${props => props.theme.tertiary_dark}),
+                  background-image: linear-gradient(to right bottom, ${props => props.theme.color_tertiary_light}, ${props => props.theme.color_tertiary_dark}),
                   url(../../../static/nat-7.jpg);
             }
       }

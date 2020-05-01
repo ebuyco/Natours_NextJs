@@ -49,7 +49,7 @@ const Grid = styled.div`
             }
 
             .col-1-of-3{
-                  width: calc((100% - ${props => props.theme.grids.gutter_horizontal}) / 3);
+                  width: calc((100% - 2 * ${props => props.theme.grids.gutter_horizontal}) / 3);
             }
 
             .col-2-of-3 {

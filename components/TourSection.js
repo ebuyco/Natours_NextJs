@@ -1,14 +1,17 @@
 import React from 'react';
+import TourStyle from '../components/styles/layout/TourStyle';
 import Card from '../components/styles/base/Card';
 import Grid from '../components/styles/base/Grid';
 import Utilities from '../components/styles/base/Utilities';
 import Typography from '../components/styles/base/Typography';
+import Button from '../components/styles/base/Button';
 
 const SectionTour = () => (
-      <>
+      <TourStyle>
         <Grid>
         <Card>
          <Typography>
+            <Button>
              <Utilities>
                     <section className="section-tours" id="section-tours">
                           <div className="u-center-text u-margin-bottom-big">
@@ -93,16 +96,16 @@ const SectionTour = () => (
                                                        </div>
                                                        <h4 className="card__heading">
                                                             <span className="card__heading-span card__heading-span--3">
-                                                                    The Sea Explorer
+                                                                    The Snow Adventurer
                                                             </span>
                                                        </h4>
                                                         <div className="card__details">
                                                               <ul>
-                                                                    <li>3 day tours</li>
-                                                                    <li>Up to 30 people</li>
-                                                                    <li>2 tour guides</li>
-                                                                    <li>Sleep in cozy hotels</li>
-                                                                    <li>Difficult: easy</li>
+                                                                    <li>5 day tours</li>
+                                                                    <li>Up to 15 people</li>
+                                                                    <li>3 tour guides</li>
+                                                                    <li>Sleep in provided tents </li>
+                                                                    <li>Difficulty: hard</li>
                                                               </ul>
                                                         </div>
                                                   </div>
@@ -124,10 +127,11 @@ const SectionTour = () => (
                           </div>
                     </section>
                </Utilities>
+               </Button>
             </Typography>
             </Card>
             </Grid>
-      </>
+      </TourStyle>
 
 );
 
