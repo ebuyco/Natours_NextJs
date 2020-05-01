@@ -22,7 +22,7 @@ const Typography = styled.div`
 
                     @media(max-width: ${props => props.theme.grids.phone}){
                           letter-spacing: 1rem;
-                          font-family: 5rem;
+                          font-size: 5rem;
                     }
             }
 
@@ -55,10 +55,12 @@ const Typography = styled.div`
 
                 @media(max-width: ${props => props.theme.screens.tab_port}){
                             letter-spacing: 3rem;
+                            font-size: 2.5rem;
                  }
 
                  @media(max-width: ${props => props.theme.screens.phone}){
                             letter-spacing: 2.5rem;
+                            font-size: 1.8rem;
                  }
 
                  &:hover {

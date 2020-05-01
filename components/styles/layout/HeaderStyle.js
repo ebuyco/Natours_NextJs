@@ -151,7 +151,7 @@ const HeaderStyle = styled.header`
 
                           @media(max-width: ${props => props.theme.screens.phone}){
                               letter-spacing: 1rem;
-                              font-family: 5rem;
+                              font-size: 5rem;
                           }
 
                   }
