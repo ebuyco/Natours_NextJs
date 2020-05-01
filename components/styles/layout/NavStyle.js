@@ -9,17 +9,6 @@ const NavStyle = styled.div`
           &__checkbox{
               display: none;
 
-              ${props => props.open && `transform: scale(80);`};
-              ${props => props.open && `opacity: 1; width: 100%;`};
-
-              &:checked ~ &__background {
-                transform: scale(80);
-            }
-
-            &:checked ~ &__nav {
-                opacity: 1;
-                width: 100%;
-            }
           }
 
           &__button {
@@ -47,17 +36,17 @@ const NavStyle = styled.div`
           }
 
           &__background {
-                     height: 6rem;
-                    width: 6rem;
-                    border-radius: 50%;
-                    position: fixed;
-                    top: 6.5rem;
-                    right: 6.5rem;
-                    background-image: radial-gradient(${props => props.theme.color_primary_light}, ${props => props.theme.color_primary_dark});
-                    z-index: 1000;
-                    transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
 
                     &.Open{
+                        height: 6rem;
+                        width: 6rem;
+                        border-radius: 50%;
+                        position: fixed;
+                        top: 6.5rem;
+                        right: 6.5rem;
+                        background-image: radial-gradient(${props => props.theme.color_primary_light}, ${props => props.theme.color_primary_dark});
+                        z-index: 1000;
+                        transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
 
                         display: block;
                         transform: scale(80);
@@ -178,6 +167,61 @@ const NavStyle = styled.div`
                 top: .8rem;
                 }
 
+              &__burger {
+                  &__Open{
+                      display: none;
+                  }
+
+                  &__Close {
+                      display: inline-block;
+                      position: relative;
+                        margin-top: 3.5rem;
+
+                        &,
+                        &::before,
+                        &::after{
+                              width: 3rem;
+                              height: 2px;
+                              background-color: ${props => props.theme. color_grey_dark3 };
+                              display: inline-block;
+                        }
+
+                        &::before,
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            transition: all .2s;
+                        }
+
+                        &::before {
+                          top: -.8rem;
+                          }
+                        &::after {
+                          top: .8rem;
+                          }
+
+
+
+                  }
+              }
+
+              &__closed {
+                  display:none;
+                  &__Open{
+                    display: inline-block;
+                      font-size: 4rem;
+                      position: relative;
+                      margin-top: 0.5rem;
+                      font-family: 'OpenSans-Light';
+                  }
+
+                  &__Close {
+                      display: none;
+                  }
+                 }
+
+              }
 
           }
 
@@ -204,8 +248,6 @@ const NavStyle = styled.div`
         top: 0;
         transform: rotate(-135deg);
     }
-
-      }
 
 
 `;

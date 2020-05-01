@@ -17,14 +17,18 @@ const Navigation = () => {
                       onClick={toggle}
                     >
                             <span
-                            className="navigation__icon"
+                            // className="navigation__icon"
+                            className={`navigation__icon__burger__${isOpen ? 'Open' : 'Close'}`}
                             >&nbsp;</span>
+                             <span
+                            className={`navigation__icon__closed__${isOpen ? 'Open' : 'Close'}`}
+                            >X</span>
                     </label>
 
                     <div
                     // className="navigation__background"
                     className={`navigation__background ${isOpen ? 'Open' : 'Close'}`}
-                    >X</div>
+                    ></div>
 
                     <nav
                      className={`navigation__nav ${isOpen ? 'Open' : 'Close'}`}
