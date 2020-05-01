@@ -73,28 +73,27 @@ const NavStyle = styled.div`
 
           &__nav {
 
-                /* height: 100vh;
+                height: 100vh;
                 position: fixed;
                 top: 0;
                 left: 0;
                 z-index: 1500;
-                transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
-                display:  ${({ open }) => open ? 'none' : 'block' }; */
+                display:none;
 
                &.Close{
                   display:none;
               }
 
               &.Open{
-                 display:block;
-                height: 100vh;
+                display:block;
+                /* height: 100vh;
                 position: fixed;
                 top: 0;
                 left: 0;
-                z-index: 1500;
+                z-index: 1500; */
 
 
-                 opacity: 1;
+                  opacity: 1;
                   width: 100%;
                    background-image: radial-gradient(${props => props.theme.color_primary_light}, ${props => props.theme.color_primary_dark});
                    transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
@@ -110,7 +109,7 @@ const NavStyle = styled.div`
                           right: 3.5rem;
                     }
 
-              } */
+              }
 
 
           }

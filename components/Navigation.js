@@ -1,4 +1,4 @@
-import React , {useState, useRef} from 'react';
+import React , {useState} from 'react';
 import NavStyle from './styles/layout/NavStyle';
 
 
@@ -10,13 +10,11 @@ const Navigation = () => {
       return(
           <NavStyle>
               <div className="navigation">
-                    {/* <a href="#" className={`name__tagger__${isOpen ? 'm-menu--active' : 'menu'}`} onClick={toggle}>Tet</a> */}
+
                   <input type="checkbox" className="navigation__checkbox"/>
 
-                    <label htmlFor="navi-toggle"
-                    //  className="navigation__button"
-                    // className={`navigation__button--${attachedClasses.join('')}`}
-                     onClick={toggle}
+                  <label htmlFor="navi-toggle" className="navigation__button"
+                      onClick={toggle}
                     >
                             <span
                             className="navigation__icon"
@@ -26,13 +24,10 @@ const Navigation = () => {
                     <div className="navigation__background">&nbsp;</div>
 
                     <nav
+                    // className="navigation__nav"
                       className={`navigation__nav ${isOpen ? 'Open' : 'Close'}`}
-                    // className={`navigation__nav ${attachedClasses.join('')}`}
                     >
-                         <label htmlFor="navi-toggle"
-                         className="navigation__button">
 
-                    </label>
                           <ul className="navigation__list">
                                     <li className="navigation__item">
                                         <a href="#about" className="navigation__link">
