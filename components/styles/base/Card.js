@@ -92,6 +92,7 @@ const Card = styled.div`
 
 
 
+
       &__picture{
             background-size: cover;
             height: 23rem;
