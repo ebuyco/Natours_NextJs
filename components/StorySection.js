@@ -1,16 +1,24 @@
 import React from 'react';
-
+import BgVideo from '../components/styles/base/BgVideo';
+import Grid from '../components/styles/base/Grid';
+import Utilities from '../components/styles/base/Utilities';
+import Typography from '../components/styles/base/Typography';
 
 const StorySection = () => (
       <>
-           <section className="section-stories">
-                    <div className="bg-video">
-                            <video autoPlay muted loop className="bg-video__content">
-                                    <source src="../static/video.mp4" type="video/mp4"/>
-                                    <source src="../static/video.webm" type="video/webm"/>
-                            </video>
-                    </div>
+        <Grid>
+            <Typography>
+                  <Utilities>
+                  <section className="section-stories">
+                      <BgVideo>
+                          <div className="bg-video">
+                                <video autoPlay muted loop className="bg-video__content">
+                                        <source src="../static/video.mp4" type="video/mp4"/>
+                                        <source src="../static/video.webm" type="video/webm"/>
+                                </video>
+                        </div>
 
+                      </BgVideo>
                     <div className="u-center-text u-margin-bottom-big">
                                 <h2 className="heading-secondary">
                                       We make people genuinely happy
@@ -67,6 +75,10 @@ const StorySection = () => (
                             <a href="#" className="btn-next">Read all stories &rarr;</a>
                     </div>
            </section>
+                  </Utilities>
+            </Typography>
+        </Grid>
+
       </>
 );
 
