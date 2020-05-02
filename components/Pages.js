@@ -151,7 +151,6 @@ const GlobalStyle = createGlobalStyle`
                 color: ${props => props.theme.base};
             }
 
-
             /* Remove list styles on ul, ol elements with a class attribute */
             ul[class],
             ol[class] {
