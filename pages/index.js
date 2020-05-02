@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import AboutSection from '../components/AboutSection';
 import FeatureSection from '../components/FeatureSection';
 import TourSection from '../components/TourSection';
+import StorySection from '../components/StorySection';
 
 const Home = () => (
        <>
@@ -12,6 +13,7 @@ const Home = () => (
                     <AboutSection/>
                     <FeatureSection/>
                     <TourSection/>
+                    <StorySection/>
                 </main>
        </>
 );

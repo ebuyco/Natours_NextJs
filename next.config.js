@@ -25,6 +25,12 @@ module.exports = withFonts({
       ],
     },
     {
+      test: [/\.webm$/, /\.mp4$/, /\.ogv?g$/,/\.swf$/,/\.ogg$/],
+      use: [{
+        loader: 'file-loader'
+      }]
+    },
+    {
       test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2|otf)$/,
       use: {
         loader: 'url-loader',

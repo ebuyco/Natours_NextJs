@@ -3,7 +3,7 @@ import LogoWhite from '../public/static/logo-white.png';
 import HeaderStyle from '../components/styles/layout/HeaderStyle';
 import Typography from '../components/styles/base/Typography';
 import Button from '../components/styles/base/Button';
-import Buttons from '../components/styles/base/Button';
+
 
 const Header = () => {
     return(
