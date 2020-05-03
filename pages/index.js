@@ -7,6 +7,7 @@ import TourSection from '../components/TourSection';
 import StorySection from '../components/StorySection';
 import BookSection from '../components/BookSection';
 import Footer from '../components/Footer';
+import PopUp from '../components/PopUp';
 
 // Main Style Component
 import HeaderStyle from '../components/styles/layout/HeaderStyle';
@@ -17,6 +18,7 @@ import FeatureStyle from '../components/styles/layout/FeatureStyle';
 import TourStyle from '../components/styles/layout/TourStyle';
 import StoryStyle from '../components/styles/layout/StoryStyle';
 import FooterStyle from '../components/styles/layout/FooterStyle';
+import PopUpStyle from '../components/styles/layout/PopUpStyle';
 
 // Helper Components
 import Typography from '../components/styles/base/Typography';
@@ -71,6 +73,9 @@ const Home = () => (
                                 <FooterStyle>
                                    <Footer/>
                                 </FooterStyle>
+                                <PopUpStyle>
+                                   <PopUp/>
+                                </PopUpStyle>
                           </Utilities>
                     </Button>
               </Typography>

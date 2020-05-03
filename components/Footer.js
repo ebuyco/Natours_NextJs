@@ -51,7 +51,7 @@ const Footer = () => (
                                         <p className="footer__copyright">
                                                Built by <a href="#" className="footer__link">Ernie Buyco</a>  <a href="#" className="footer__link">This is React App</a>.
                                             Copyright &copy; by Ernie buyco. You are 100% allowed to use this webpage for both personal
-                                            and commercial use, but NOT to claim it as your own design. A credit to the original author, Ernie Buyco
+                                            and commercial use, but NOT to claim it as your own design. A credit to the original author,Jonas Schmedtmann
                                            , is of course highly appreciated!
                                         </p>
                                   </div>
