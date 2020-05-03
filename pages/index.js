@@ -16,6 +16,7 @@ import BookStyle from '../components/styles/layout/BookStyle';
 import FeatureStyle from '../components/styles/layout/FeatureStyle';
 import TourStyle from '../components/styles/layout/TourStyle';
 import StoryStyle from '../components/styles/layout/StoryStyle';
+import FooterStyle from '../components/styles/layout/FooterStyle';
 
 // Helper Components
 import Typography from '../components/styles/base/Typography';
@@ -67,7 +68,9 @@ const Home = () => (
                                       </FormStyle>
                                   </BookStyle>
                               </main>
-                              <Footer/>
+                                <FooterStyle>
+                                   <Footer/>
+                                </FooterStyle>
                           </Utilities>
                     </Button>
               </Typography>
