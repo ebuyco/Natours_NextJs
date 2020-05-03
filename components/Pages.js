@@ -91,6 +91,7 @@ const GlobalStyle = createGlobalStyle`
               box-sizing: border-box;
             }
 
+
             /* Remove default padding */
             ul[class],
             ol[class] {

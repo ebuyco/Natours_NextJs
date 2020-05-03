@@ -11,10 +11,10 @@ const Utilities = styled.div`
        }
 
        .u-margin-bottom-medium {
-               margin-bottom: 4rem;
+               margin-bottom: 4rem !important;
 
                @media(max-width: ${props => props.theme.screens.tab_port}){
-                    margin-bottom: 3rem;
+                    margin-bottom: 3rem !important;
                }
        }
 
