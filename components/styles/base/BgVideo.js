@@ -9,7 +9,7 @@ const BgVideo = styled.div`
           left: 0;
           height: 100%;
           width: 100%;
-          z-index: -0.111;
+          z-index: -1;
           opacity: .15;
           overflow: hidden;
 

@@ -4,12 +4,11 @@ import Grid from '../components/styles/base/Grid';
 import Utilities from '../components/styles/base/Utilities';
 import Typography from '../components/styles/base/Typography';
 import StoryStyle from '../components/styles/layout/StoryStyle';
-import Story from '../components/styles/base/Story';
 import Button from '../components/styles/base/Button';
 
 const StorySection = () => (
       <StoryStyle>
-          <Story>
+
           <BgVideo>
           <Grid>
             <Typography>
@@ -86,7 +85,7 @@ const StorySection = () => (
         </Grid>
 
         </BgVideo>
-          </Story>
+
 
       </StoryStyle>
 );
