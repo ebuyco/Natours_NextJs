@@ -7,9 +7,7 @@ import Button from '../components/styles/base/Button';
 
 const Header = () => {
     return(
-        <HeaderStyle>
-            <Typography>
-                  <Button>
+          <>
                       <header className="header">
                       <div className="header__logo-box">
                           <img src={LogoWhite} alt="logo" className="header__logo"/>
@@ -27,9 +25,7 @@ const Header = () => {
                               <a href="#section-tours" className="btn btn--white btn--animated">Discover Our Tours</a>
                       </div>
                    </header>
-                  </Button>
-            </Typography>
-        </HeaderStyle>
+          </>
     )
 }
 

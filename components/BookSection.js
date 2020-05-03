@@ -1,20 +1,9 @@
 import React from 'react';
-import Grid from '../components/styles/base/Grid';
-import Typography from '../components/styles/base/Typography';
-import Button from '../components/styles/base/Button';
-import Utilities from '../components/styles/base/Utilities';
-import FormStyle from '../components/styles/base/Form.js';
-import BookStyle from '../components/styles/layout/BookStyle';
+
 
 const BookSection = () => (
-      <BookStyle>
-
-            <Grid>
-                  <Typography>
-                        <Button>
-                              <Utilities>
-                              <FormStyle>
-                              <section className="section-book">
+        <>
+                        <section className="section-book">
                   <div className="row">
                         <div className="book">
                                 <div className="book__form">
@@ -96,13 +85,8 @@ const BookSection = () => (
                         </div>
                   </div>
           </section>
-          </FormStyle>
-                              </Utilities>
-                        </Button>
-                  </Typography>
-            </Grid>
 
-      </BookStyle>
+        </>
 );
 
 

@@ -1,5 +1,5 @@
 import React , {useState} from 'react';
-import NavStyle from './styles/layout/NavStyle';
+
 
 
 const Navigation = () => {
@@ -8,7 +8,7 @@ const Navigation = () => {
   const toggle = () => setIsOpen(!isOpen);
 
       return(
-          <NavStyle>
+
               <div className="navigation">
 
                   <input type="checkbox" className="navigation__checkbox"/>
@@ -76,7 +76,7 @@ const Navigation = () => {
                           </ul>
                     </nav>
               </div>
-          </NavStyle>
+
       )
 }
 

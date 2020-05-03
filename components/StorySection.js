@@ -1,19 +1,11 @@
 import React from 'react';
-import BgVideo from '../components/styles/base/BgVideo';
-import Grid from '../components/styles/base/Grid';
-import Utilities from '../components/styles/base/Utilities';
-import Typography from '../components/styles/base/Typography';
-import StoryStyle from '../components/styles/layout/StoryStyle';
-import Button from '../components/styles/base/Button';
+
+
 
 const StorySection = () => (
-      <StoryStyle>
 
-          <BgVideo>
-          <Grid>
-            <Typography>
-                  <Utilities>
-                        <Button>
+
+                        <>
                         <section className="section-stories">
 
                             <div className="bg-video">
@@ -79,15 +71,11 @@ const StorySection = () => (
                               <a href="#" className="btn-text">Read all stories &rarr;</a>
                             </div>
                             </section>
-                        </Button>
-                  </Utilities>
-            </Typography>
-        </Grid>
 
-        </BgVideo>
+                        </>
 
 
-      </StoryStyle>
+
 );
 
 

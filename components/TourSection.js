@@ -1,19 +1,11 @@
 import React from 'react';
-import TourStyle from '../components/styles/layout/TourStyle';
-import Card from '../components/styles/base/Card';
-import Grid from '../components/styles/base/Grid';
-import Utilities from '../components/styles/base/Utilities';
-import Typography from '../components/styles/base/Typography';
-import Button from '../components/styles/base/Button';
+
+
 
 const SectionTour = () => (
-      <TourStyle>
-        <Grid>
-        <Card>
-         <Typography>
-            <Button>
-             <Utilities>
-                    <section className="section-tours" id="section-tours">
+
+    <>
+            <section className="section-tours" id="section-tours">
                           <div className="u-center-text u-margin-bottom-big">
                                       <h2 className="heading-secondary">
                                               Most popular tours
@@ -126,12 +118,8 @@ const SectionTour = () => (
                                      <a href="#" className="btn btn--green">Discover all tours</a>
                           </div>
                     </section>
-               </Utilities>
-               </Button>
-            </Typography>
-            </Card>
-            </Grid>
-      </TourStyle>
+
+    </>
 
 );
 
