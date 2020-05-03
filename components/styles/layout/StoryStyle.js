@@ -33,18 +33,19 @@ const StoryStyle = styled.div`
                 width: 15rem;
                 height: 15rem;
                 float: left;
-                transform: translateX(-3rem) skewX(12deg);
+                transform: translateX(-1rem) skewX(12deg);
                 position: relative;
                 overflow: hidden;
                 border-radius: 50%;
-
+                clip-path: circle(50% at 50% 50%);
+/*
                 @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
                     -webkit-clip-path: circle(50% at 50% 50%);
                     clip-path: circle(50% at 50% 50%);
                     -webkit-shape-outside: circle(50% at 50% 50%);
                     shape-outside: circle(50% at 50% 50%);
                     border-radius: none;
-                }
+                } */
 
                 @media(max-width: ${props => props.theme.screens.phone}){
                         transform: translateX(-3rem) skewX(0);
@@ -53,7 +54,8 @@ const StoryStyle = styled.div`
 
         &__img {
                 height: 100%;
-                transform: translateX(-4rem) scaleX(1.4);
+                /* transform: translateX(-4rem) scaleX(1.4); */
+                transform: translateX(1rem) scaleX(1.4);
                 backface-visibility: hidden;
                 transition: all .5s;
 

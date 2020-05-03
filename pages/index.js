@@ -4,6 +4,7 @@ import AboutSection from '../components/AboutSection';
 import FeatureSection from '../components/FeatureSection';
 import TourSection from '../components/TourSection';
 import StorySection from '../components/StorySection';
+import BookSection from '../components/BookSection';
 
 const Home = () => (
        <>
@@ -14,6 +15,7 @@ const Home = () => (
                     <FeatureSection/>
                     <TourSection/>
                     <StorySection/>
+                    <BookSection/>
                 </main>
        </>
 );
